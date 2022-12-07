@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* RESET */
+
+*,
+*::before,
+*::after {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+/* VARIABLES */
+
+:root {
+
+    /* COLORS */
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-dray: hsl(0, 0%, 59%);
+    --shadow: hsla(229, 23%, 23%, .4);
+
+    /* STYLES */
+    --border-radius: 1.8rem;
+    --font-size-name-stat: 1.8rem;
+    --box-shadow: 0 5px 30px 3px var(--shadow);
+
+}
+
+/* GENERALS */
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1.5rem;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--dark-cyan);
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position:  right 52vw bottom 35vh, left 48vw top 52vh;
+}
+
+main {
+    width: 100%;
+}
+
+img {
+    display: block;
+}
+
+.wrap {
+    display: block;
+    text-align: center;
+}
+
+h2, p {
+    font-size: 1.8rem;
+}
+
+.separator {
+    width: 100%;
+    color: var(--dark-dray);
+    opacity: .3;
+}
+
+/* MOBILE FIRST WORKFLOW */
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 34.5rem;
+    background-color: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+figure {
+    position: relative;
+    line-height: 0;
+}
+
+figure::after {
+    content: url(images/image-victor.jpg);
+    left: 50%;
+    bottom: 0;
+    position: absolute;
+    transform: translate(-50%, 50%);
+    border-radius: 50%;
+    overflow: hidden;
+    border: 7px solid white;
+
+}
+
+.card-info {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.card-info_name {
+    padding: 2rem 0 2.5rem 0;
+}
+
+.card-info_age {
+    font-weight: 400;
+    color: var(--dark-grayish-blue);
+    margin-left: .4rem;
+}
+
+.card-info_country {
+    font-weight: 400;
+    color: var(--dark-grayish-blue);
+    font-size: 1.4rem;
+    padding-top: .8rem;
+}
+
+.stat-box {
+    width: 100%;
+    padding: 2.1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    line-height: 2.35rem;
+}
+
+.stat-box_stat {
+    text-align: center;
+    font-weight: 700;
+}
+
+.stat-box_details {
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: .15rem;
+    color: var(--dark-dray);
+}
